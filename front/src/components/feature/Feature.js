@@ -1,63 +1,87 @@
 import React from 'react'
 import "./feature.css"
-import ReactBootstrapCarousel from "react-bootstrap-carousel";
-import "bootstrap/dist/css/bootstrap.css";
-import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
-import Carousel from 'react-bootstrap/Carousel';
-import { IconButton, Box, Typography, useTheme,  Button } from "@mui/material";
-
-
+import { Link } from "react-router-dom";
+import { Typography, Card, CardContent, CardMedia, Box } from "@mui/material";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 const Feature = () => {
 
   return (
-<Box
-maxWidth={600}
-margin="auto"
-marginTop={6}
-maxHeight={400}
+    <Box
 
->
-<Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGAYkgD8ZK-12QjvLIjcvmb8fHjrk1KNLZVA&usqp=CAU"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGAYkgD8ZK-12QjvLIjcvmb8fHjrk1KNLZVA&usqp=CAU"
-          alt="Second slide"
-        />
+      sx={{
+        display: 'flex',
+        marginTop: "150px",
+        marginLeft: "auto",
+        marginRight: "auto",
+        background: "orange",
+        justifyContent: "center",
+        maxWidth: "800px",
+        flexWrap: 'wrap',
+        '& > :not(style)': {
+          m: 1,
+          width: 328,
+          height: 328,
+        },
+      }}
+    >
+ <Card sx={{ width: { xs: '100%', sm: '358px', md: "320px", }, boxShadow: "none", borderRadius: 0 }}>
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGAYkgD8ZK-12QjvLIjcvmb8fHjrk1KNLZVA&usqp=CAU"
-          alt="Third slide"
-        />
+        <CardMedia image="https://images.pexels.com/photos/1707819/pexels-photo-1707819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="pic"
+        sx={{ width: { xs: '100%', sm: '358px'}, height: 180 }}
+      />
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+          <CardContent sx={{ backgroundColor: "#1E1E1E", height: '106px' }}>
 
-</Box>
+        <Typography variant="subtitle1" fontWeight="bold" color="#FFF" >
+                Note Title
+        </Typography>
+
+          <Typography variant="subtitle2" color="gray">
+                Title
+        <CheckCircleIcon sx={{ fontSize: "12px", color: "gray", ml: "5px" }} />
+        </Typography>
+
+    </CardContent>
+</Card>
+<Card sx={{ width: { xs: '100%', sm: '358px', md: "320px", }, boxShadow: "none", borderRadius: 0 }}>
+
+<CardMedia image="https://images.pexels.com/photos/1707819/pexels-photo-1707819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="pic"
+sx={{ width: { xs: '100%', sm: '358px'}, height: 180 }}
+/>
+
+  <CardContent sx={{ backgroundColor: "#1E1E1E", height: '180px ' }}>
+
+<Typography variant="subtitle1" fontWeight="bold" color="#FFF" >
+        Note Title
+</Typography>
+
+  <Typography variant="subtitle2" color="gray">
+        Title
+<CheckCircleIcon sx={{ fontSize: "12px", color: "gray", ml: "5px" }} />
+</Typography>
+
+</CardContent>
+</Card>
+<Card sx={{ width: { xs: '100%', sm: '358px', md: "320px", }, boxShadow: "none", borderRadius: 0 }}>
+
+<CardMedia image="https://images.pexels.com/photos/1707819/pexels-photo-1707819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="pic"
+sx={{ width: { xs: '100%', sm: '358px'}, height: 180 }}
+/>
+
+  <CardContent sx={{ backgroundColor: "#1E1E1E", height: '106px' }}>
+
+<Typography variant="subtitle1" fontWeight="bold" color="#FFF" >
+        Note Title
+</Typography>
+
+  <Typography variant="subtitle2" color="gray">
+        Title
+<CheckCircleIcon sx={{ fontSize: "12px", color: "gray", ml: "5px" }} />
+</Typography>
+
+</CardContent>
+</Card>
+    </Box>
   )
 }
 
