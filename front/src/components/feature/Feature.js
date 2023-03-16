@@ -3,17 +3,22 @@ import "./feature.css"
 import { Link } from "react-router-dom";
 import { Typography, Card, CardContent, CardMedia, Box } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { Container } from '@mui/system';
 const Feature = () => {
 
   return (
+    <>
+    <Container
+    sx={{
+      background: "#efefef",
+
+    }}>
     <Box
 
       sx={{
-        display: 'flex',
-        marginTop: "150px",
         marginLeft: "auto",
         marginRight: "auto",
-        background: "orange",
+        background: "#efefef",
         justifyContent: "center",
         maxWidth: "800px",
         flexWrap: 'wrap',
@@ -82,6 +87,8 @@ sx={{ width: { xs: '100%', sm: '358px'}, height: 180 }}
 </CardContent>
 </Card>
     </Box>
+    </Container>
+    </>
   )
 }
 
