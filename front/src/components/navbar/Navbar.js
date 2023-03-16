@@ -16,7 +16,7 @@ const Navbar = () => {
     alignItems="center"
     width="100%"
     height="60px"
-    backgroundColor="#ef383f"
+    backgroundColor="#efefef"
     color="black"
     position="fixed"
     top="0"
