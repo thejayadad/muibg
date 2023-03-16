@@ -1,47 +1,24 @@
 import React from 'react'
-import { Box, Typography, IconButton, useMediaQuery } from "@mui/material";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { shades } from "../../theme";
-import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import "./feature.css"
+import Carousel from 'nuka-carousel';
+
 
 
 const Feature = () => {
-    const isNonMobile = useMediaQuery("(min-width:600px)");
 
+  const params = {
+    wrapAround: true,
+    animation: 'zoom',
+    slidesToShow: 2,
+  }
   return (
+<div>
+<Carousel {...params}>
 
-       <Carousel>
-<Box
-width="90%"
-height="200px"
-display="flex"
-justifyContent="center"
-alignItems="center"
-background="#222"
+          <img src="https://images.pexels.com/photos/219095/pexels-photo-219095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="pic"/>
 
-
->
-    hi
-</Box>
-<Box
-width="90%"
-height="200px"
-display="flex"
-justifyContent="center"
-alignItems="center"
-backGround="#222"
-
->
-
-hi
-</Box>
-
-
-
-    </Carousel>
-
+      </Carousel>
+</div>
   )
 }
 
